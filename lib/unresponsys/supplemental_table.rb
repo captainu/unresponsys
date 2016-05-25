@@ -26,8 +26,8 @@ class Unresponsys
         @table = table
       end
 
-      def find(primary_key)
-        options = { query: { qa: 'ID_', id: primary_key.to_responsys, fs: 'all' } }
+      def find(primary_key, primary_key_name="ID_")
+        options = { query: { qa: primary_key_name, id: primary_key.to_responsys, fs: 'all' } }
         r       = @table.client.get("/folders/#{@table.folder.name}/suppData/#{@table.name}/members", options)
 
         fields = {}
