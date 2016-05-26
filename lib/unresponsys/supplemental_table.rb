@@ -38,8 +38,8 @@ class Unresponsys
         Unresponsys::Row.new(@table, fields)
       end
 
-      def new(primary_key)
-        Unresponsys::Row.new(@table, { 'ID_' => primary_key })
+      def new(primary_key, primary_key_name="ID_")
+        Unresponsys::Row.new(@table, { primary_key_name => primary_key })
       end
     end
   end
