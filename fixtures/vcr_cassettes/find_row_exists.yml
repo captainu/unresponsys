@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api2-017.responsys.net/rest/api/v1.1/folders/TestData/suppData/TestTable/members?fs=all&id=1&qa=ID_
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - E4o1j9cyV5AfbTZIEw_spa3lW6J52N63oG1xssmIywuZHPT7Hq-QhCZ-Xw
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Max-Forwards:
+      - '20'
+      Via:
+      - 1.0 oag02-ri2.ri2.dc1.responsys.com (Gateway)
+      Connection:
+      - close
+      X-Correlationid:
+      - Id-fce34d57481fbba0d509ab11 0
+      Date:
+      - Tue, 31 May 2016 19:20:28 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Set-Cookie:
+      - BIGipServeroapi2-9000-9001=3792340746.10531.0000; path=/
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"recordData":{"fieldNames":["ID_","TITLE","CREATED_DATE_","MODIFIED_DATE_"],"records":[["1","My
+        Title","2016-05-31 12:11:11.463769","2016-05-31 12:20:26.524923"]],"mapTemplateName":null},"insertOnNoMatch":false,"updateOnMatch":null,"matchColumnNames":null,"links":[{"rel":"self","href":"/rest/api/v1.1/folders/TestData/suppData/TestTable/members?qa=ID_&id=1&fs=all","method":"GET"},{"rel":"mergeTableMembers","href":"/rest/api/v1.1/folders/TestData/suppData/TestTable/members","method":"POST"}]}'
+    http_version: 
+  recorded_at: Tue, 31 May 2016 19:20:28 GMT
+recorded_with: VCR 3.0.3

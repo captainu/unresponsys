@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api2-017.responsys.net/rest/api/v1.1/lists/TestDataList/members?fs=all&id=kwkimball@gmail.com&qa=e
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - E4ktYZ7Ye3n0H3_D9xCCNpHMJVjP5xBEaLdQ8XNNQdnAVLPhSrUhmzkwrg
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Max-Forwards:
+      - '20'
+      Via:
+      - 1.0 oag02-ri2.ri2.dc1.responsys.com (Gateway)
+      Connection:
+      - close
+      X-Correlationid:
+      - Id-e9e34d57ef1bb9912db9ccb5 0
+      Date:
+      - Tue, 31 May 2016 19:20:09 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Set-Cookie:
+      - BIGipServeroapi2-9000-9001=3792340746.10531.0000; path=/
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"recordData":{"fieldNames":["RIID_","CREATED_SOURCE_IP_","CUSTOMER_ID_","EMAIL_ADDRESS_","EMAIL_DOMAIN_","EMAIL_ISP_","EMAIL_FORMAT_","EMAIL_PERMISSION_STATUS_","EMAIL_DELIVERABILITY_STATUS_","EMAIL_PERMISSION_REASON_","EMAIL_MD5_HASH_","EMAIL_SHA256_HASH_","MOBILE_NUMBER_","MOBILE_COUNTRY_","MOBILE_PERMISSION_STATUS_","MOBILE_DELIVERABILITY_STATUS_","MOBILE_PERMISSION_REASON_","POSTAL_STREET_1_","POSTAL_STREET_2_","CITY_","STATE_","POSTAL_CODE_","COUNTRY_","POSTAL_PERMISSION_STATUS_","POSTAL_DELIVERABILITY_STATUS_","POSTAL_PERMISSION_REASON_","CREATED_DATE_","MODIFIED_DATE_","FIRST_NAME","LAST_NAME","LAST_PURCHASE","MOM","TOTAL_REVENUE","AGE"],"records":[["303306162",null,null,"kwkimball@gmail.com","gmail.com","Gmail","N","I","D","WS:MERGE","937e1bde69b82b5f01aa98e7168d4cb7","347201b4a465685f3578207530a5348540cdd280498e9f5b52a32b6526d89de4",null,null,"O","U",null,null,null,null,null,null,null,"O","U",null,"2016-05-27
+        07:21:04.08225","2016-05-31 12:20:08.275696",null,"Kimball","2015-10-07 05:00:00.0","F","101.23","30"]],"mapTemplateName":null},"mergeRule":{"textValue":null,"insertOnNoMatch":false,"updateOnMatch":null,"matchColumnName1":null,"matchColumnName2":null,"matchOperator":null,"matchColumnName3":null,"optinValue":null,"optoutValue":null,"rejectRecordIfChannelEmpty":null,"htmlValue":null,"defaultPermissionStatus":null},"links":[{"rel":"self","href":"/rest/api/v1.1/lists/TestDataList/members?qa=e&id=kwkimball@gmail.com&fs=all","method":"GET"},{"rel":"mergeListRecipients","href":"/rest/api/v1.1/lists/TestDataList/members","method":"POST"},{"rel":"deleteListRecipientsRIID","href":"/rest/api/v1.1/lists/TestDataList/members/<riid>","method":"DELETE"}]}'
+    http_version: 
+  recorded_at: Tue, 31 May 2016 19:20:09 GMT
+recorded_with: VCR 3.0.3

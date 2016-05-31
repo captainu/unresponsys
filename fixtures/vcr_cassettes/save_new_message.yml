@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api2-017.responsys.net/rest/api/v1.1/campaigns/KevinTest/email
+    body:
+      encoding: UTF-8
+      string: '{"recipientData":[{"recipient":{"listName":{"objectName":"TestDataList"},"recipientId":303306162}}]}'
+    headers:
+      Authorization:
+      - E4ktYZ7Ye3n0H3_D9xCCNpHMJVjP5xBEaLdQ8XNNQdnAVLPhSrUhmzkwrg
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Max-Forwards:
+      - '20'
+      Via:
+      - 1.0 oag02-ri2.ri2.dc1.responsys.com (Gateway)
+      Connection:
+      - close
+      X-Correlationid:
+      - Id-e9e34d57001c18d3782a791e 0
+      Date:
+      - Tue, 31 May 2016 19:20:09 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Set-Cookie:
+      - BIGipServeroapi2-9000-9001=3792340746.10531.0000; path=/
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"errorMessage":null,"success":true,"recipientId":303306162}]'
+    http_version: 
+  recorded_at: Tue, 31 May 2016 19:20:10 GMT
+recorded_with: VCR 3.0.3

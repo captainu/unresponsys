@@ -35,36 +35,36 @@ describe Unresponsys::Row do
     describe '#to_h' do
       it 'returns the correct hash' do
         hash = {
-          'ID_' => '1',
-          'TITLE' => 'My Title'
+          'ID_'=>'1',
+          'TITLE'=>'My Title'
         }
         expect(@row.to_h).to include(hash)
       end
     end
   end
 
-  context 'when an existing row' do
-    before :each do
-      VCR.use_cassette('get_existing_row') do
-        folder  = @client.folders.find('TestData')
-        @table  = folder.supplemental_tables.find('TestTable')
-        @row    = @table.rows.find(1)
-      end
-    end
-
-    describe '#destroy' do
-      it 'deletes to Responsys' do
-        VCR.use_cassette('delete_existing_row') do
-          expect(@client).to receive(:delete).and_call_original
-          @row.destroy
-        end
-      end
-
-      it 'returns true' do
-        VCR.use_cassette('delete_existing_row') do
-          expect(@row.destroy).to eq(true)
-        end
-      end
-    end
-  end
+  # context 'when an existing row' do
+  #   before :each do
+  #     VCR.use_cassette('get_existing_row') do
+  #       folder  = @client.folders.find('TestData')
+  #       @table  = folder.supplemental_tables.find('TestTable')
+  #       @row    = @table.rows.find(1)
+  #     end
+  #   end
+  #
+  #   describe '#destroy' do
+  #     it 'deletes to Responsys' do
+  #       VCR.use_cassette('delete_existing_row') do
+  #         expect(@client).to receive(:delete).and_call_original
+  #         @row.destroy
+  #       end
+  #     end
+  #
+  #     it 'returns true' do
+  #       VCR.use_cassette('delete_existing_row') do
+  #         expect(@row.destroy).to eq(true)
+  #       end
+  #     end
+  #   end
+  #end
 end

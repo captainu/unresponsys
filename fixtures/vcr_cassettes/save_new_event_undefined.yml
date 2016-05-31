@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api2-017.responsys.net/rest/api/v1.1/events/MyEvent
+    body:
+      encoding: UTF-8
+      string: '{"customEvent":{},"recipientData":[{"recipient":{"listName":{"objectName":"TestDataList"},"recipientId":303306162}}]}'
+    headers:
+      Authorization:
+      - EdmWDF8opMZFWTiBXwrTShojF0GRL3VcFP6hcy9E3wwAp-wV-5Rtovqonw
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Max-Forwards:
+      - '20'
+      Via:
+      - 1.0 oag02-ri2.ri2.dc1.responsys.com (Gateway)
+      Connection:
+      - close
+      X-Correlationid:
+      - Id-f9e34d57de1e29ae5ce2dd2b 0
+      Date:
+      - Tue, 31 May 2016 19:20:25 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Set-Cookie:
+      - BIGipServeroapi2-9000-9001=3792340746.10531.0000; path=/
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"type":"","title":"Custom event not found","errorCode":"CUSTOM_EVENT_NOT_FOUND","detail":"CustomEvent
+        not found in database","errorDetails":[]}'
+    http_version: 
+  recorded_at: Tue, 31 May 2016 19:20:25 GMT
+recorded_with: VCR 3.0.3

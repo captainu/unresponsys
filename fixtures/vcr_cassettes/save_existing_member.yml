@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api2-017.responsys.net/rest/api/v1.1/lists/TestDataList/members
+    body:
+      encoding: UTF-8
+      string: '{"recordData":{"fieldNames":["EMAIL_ADDRESS_","MOBILE_NUMBER_","CUSTOMER_ID_","EMAIL_PERMISSION_STATUS_","POSTAL_STREET_1_","POSTAL_STREET_2_","CITY_","STATE_","POSTAL_CODE_","COUNTRY_","EMAIL_FORMAT_","MOBILE_COUNTRY_","MOBILE_PERMISSION_STATUS_","POSTAL_PERMISSION_STATUS_","FIRST_NAME","LAST_NAME","LAST_PURCHASE","MOM","TOTAL_REVENUE","AGE"],"records":[["kwkimball@gmail.com","","","I","","","","","","","N","","O","O","","Kimball","2015-10-07
+        05:00:00","F","101.23","30"]],"mapTemplateName":null},"mergeRule":{"insertOnNoMatch":true,"updateOnMatch":"REPLACE_ALL","matchColumnName1":"EMAIL_ADDRESS_","matchColumnName2":null,"matchOperator":null,"optinValue":"I","optoutValue":"O","defaultPermissionStatus":"OPTIN","htmlValue":"H","textValue":"T","rejectRecordIfChannelEmpty":null}}'
+    headers:
+      Authorization:
+      - Ec5Q7RNEyX3RbaBGMidZQFQ4wYx4VqBM7HBUrkFGXu2eK6fHLCHDR47MJ0
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Max-Forwards:
+      - '20'
+      Via:
+      - 1.0 oag02-ri2.ri2.dc1.responsys.com (Gateway)
+      Connection:
+      - close
+      X-Correlationid:
+      - Id-f3e34d57e61db7d8ba8c68d9 0
+      Date:
+      - Tue, 31 May 2016 19:20:19 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Set-Cookie:
+      - BIGipServeroapi2-9000-9001=3792340746.10531.0000; path=/
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"recordData":{"fieldNames":["RIID_"],"records":[["303306162"]],"mapTemplateName":null},"mergeRule":{"textValue":"T","insertOnNoMatch":true,"updateOnMatch":"REPLACE_ALL","matchColumnName1":"EMAIL_ADDRESS_","matchColumnName2":null,"matchOperator":null,"matchColumnName3":null,"optinValue":"I","optoutValue":"O","rejectRecordIfChannelEmpty":null,"htmlValue":"H","defaultPermissionStatus":"OPTIN"},"links":[{"rel":"self","href":"/rest/api/v1.1/lists/TestDataList/members","method":"POST"},{"rel":"retrieveListRecipientsRIID","href":"/rest/api/v1.1/lists/TestDataList/members/<riid>","method":"GET"},{"rel":"deleteListRecipientsRIID","href":"/rest/api/v1.1/lists/TestDataList/members/<riid>","method":"DELETE"}]}'
+    http_version: 
+  recorded_at: Tue, 31 May 2016 19:20:19 GMT
+recorded_with: VCR 3.0.3

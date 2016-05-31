@@ -14,25 +14,25 @@ describe Unresponsys::ExtensionTable do
     @table = @member.extension_tables.find('TestExtensionTable')
   end
 
-  describe '#update' do
-    context 'existing record' do
-      it 'posts to Responsys' do
-        VCR.use_cassette('update_existing_extension_row') do
-          expect(@client).to receive(:post).and_call_original
-          @table.update(title: 'My New Title')
-        end
-      end
-
-      it 'returns true' do
-        VCR.use_cassette('update_existing_extension_row') do
-          expect(@table.update(title: 'My New Title')).to eq(true)
-        end
-      end
-    end
-
-    context 'new record' do
-
-    end
-  end
+  # describe '#update' do
+  #   context 'existing record' do
+  #     it 'posts to Responsys' do
+  #       VCR.use_cassette('update_existing_extension_row') do
+  #         expect(@client).to receive(:post).and_call_original
+  #         @table.update(title: 'My New Title')
+  #       end
+  #     end
+  #
+  #     it 'returns true' do
+  #       VCR.use_cassette('update_existing_extension_row') do
+  #         expect(@table.update(title: 'My New Title')).to eq(true)
+  #       end
+  #     end
+  #   end
+  # 
+  #   context 'new record' do
+  #
+  #   end
+  # end
 
 end

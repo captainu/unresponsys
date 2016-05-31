@@ -68,7 +68,7 @@ describe Unresponsys::Member do
 
       it 'custom timestamp attributes can be saved' do
         VCR.use_cassette('save_existing_member_with_timestamp') do
-          time = Time.new(2015, 10, 7, 5, 00, 00, '-07:00')
+          time = Time.new(2015, 10, 7, 5, 00, 00, '-06:00')
           @member.last_purchase = time
           @member.save
           @member = @list.members.find('kwkimball@gmail.com')

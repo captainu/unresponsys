@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api2-017.responsys.net/rest/api/v1.1/lists/TestDataList/members
+    body:
+      encoding: UTF-8
+      string: '{"recordData":{"fieldNames":["EMAIL_ADDRESS_","MOBILE_NUMBER_","CUSTOMER_ID_","EMAIL_PERMISSION_STATUS_","POSTAL_STREET_1_","POSTAL_STREET_2_","CITY_","STATE_","POSTAL_CODE_","COUNTRY_"],"records":[["kwkimball+bar@gmail.com","","","","","","","","",""]],"mapTemplateName":null},"mergeRule":{"insertOnNoMatch":true,"updateOnMatch":"REPLACE_ALL","matchColumnName1":"EMAIL_ADDRESS_","matchColumnName2":null,"matchOperator":null,"optinValue":"I","optoutValue":"O","defaultPermissionStatus":"OPTIN","htmlValue":"H","textValue":"T","rejectRecordIfChannelEmpty":null}}'
+    headers:
+      Authorization:
+      - EdU_2xH3yhSiQgMZ9ZueJ7QEpAtORPgCdtaY5vB5uL5brbhm16drtANI5g
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Max-Forwards:
+      - '20'
+      Via:
+      - 1.0 oag02-ri2.ri2.dc1.responsys.com (Gateway)
+      Connection:
+      - close
+      X-Correlationid:
+      - Id-eee34d57001d23f05a121e2e 0
+      Date:
+      - Tue, 31 May 2016 19:20:14 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Set-Cookie:
+      - BIGipServeroapi2-9000-9001=3792340746.10531.0000; path=/
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"recordData":{"fieldNames":["RIID_"],"records":[["303306182"]],"mapTemplateName":null},"mergeRule":{"textValue":"T","insertOnNoMatch":true,"updateOnMatch":"REPLACE_ALL","matchColumnName1":"EMAIL_ADDRESS_","matchColumnName2":null,"matchColumnName3":null,"matchOperator":null,"optinValue":"I","optoutValue":"O","htmlValue":"H","rejectRecordIfChannelEmpty":null,"defaultPermissionStatus":"OPTIN"},"links":[{"rel":"self","href":"/rest/api/v1.1/lists/TestDataList/members","method":"POST"},{"rel":"retrieveListRecipientsRIID","href":"/rest/api/v1.1/lists/TestDataList/members/<riid>","method":"GET"},{"rel":"deleteListRecipientsRIID","href":"/rest/api/v1.1/lists/TestDataList/members/<riid>","method":"DELETE"}]}'
+    http_version: 
+  recorded_at: Tue, 31 May 2016 19:20:14 GMT
+recorded_with: VCR 3.0.3

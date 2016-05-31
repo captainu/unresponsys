@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api2-017.responsys.net/rest/api/v1.1/folders/TestData/suppData/TestTable/members?fs=all&id=2&qa=ID_
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - E7gpMMp7Vc-Y3duPRm2TknRI7YHDFH8cHcfmbE0AJHCqY299w8rr88pqUM
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Max-Forwards:
+      - '20'
+      Via:
+      - 1.0 oag02-ri2.ri2.dc1.responsys.com (Gateway)
+      Connection:
+      - close
+      X-Correlationid:
+      - Id-fbe34d57351f349d1817ebb8 0
+      Date:
+      - Tue, 31 May 2016 19:20:27 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Set-Cookie:
+      - BIGipServeroapi2-9000-9001=3792340746.10531.0000; path=/
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"type":"","title":"Record not found","errorCode":"RECORD_NOT_FOUND","detail":"No
+        records found in the table for the given ids","errorDetails":[]}'
+    http_version: 
+  recorded_at: Tue, 31 May 2016 19:20:27 GMT
+recorded_with: VCR 3.0.3

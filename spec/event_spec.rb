@@ -14,7 +14,7 @@ describe Unresponsys::Event do
 
   describe '#save' do
     before(:each) do
-      @event = @member.events.new('Sign_Up')
+      @event = @member.events.new('Test_Sign_Up')
     end
 
     it 'posts to Responsys' do

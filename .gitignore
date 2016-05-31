@@ -40,4 +40,3 @@ test.rb
 Gemfile.lock
 .env
 .byebug_history
-fixtures/*

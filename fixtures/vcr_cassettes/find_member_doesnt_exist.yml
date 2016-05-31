@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api2-017.responsys.net/rest/api/v1.1/lists/TestDataList/members?fs=all&id=kwkimball%2Bfoo@gmail.com&qa=e
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - E7ibetAVpJT89DIjGZwhl_pU4IMjbODyO_0DTY5u4ybAxPJI1X_c9DFXDM
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Max-Forwards:
+      - '20'
+      Via:
+      - 1.0 oag02-ri2.ri2.dc1.responsys.com (Gateway)
+      Connection:
+      - close
+      X-Correlationid:
+      - Id-e8e34d57cb1bf95bbdb944ce 0
+      Date:
+      - Tue, 31 May 2016 19:20:08 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Set-Cookie:
+      - BIGipServeroapi2-9000-9001=3792340746.10531.0000; path=/
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"type":"","title":"Record not found","errorCode":"RECORD_NOT_FOUND","detail":"No
+        records found in the list for given ids","errorDetails":[]}'
+    http_version: 
+  recorded_at: Tue, 31 May 2016 19:20:08 GMT
+recorded_with: VCR 3.0.3

@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api2-017.responsys.net/rest/api/v1.1/events/Test_Sign_Up
+    body:
+      encoding: UTF-8
+      string: '{"customEvent":{},"recipientData":[{"recipient":{"listName":{"objectName":"TestDataList"},"recipientId":303306162}}]}'
+    headers:
+      Authorization:
+      - E28N40bom1GFZg1fynob-OWQmpkWL3RMepzZmzt2EDtYAkFITrXNmjeo_w
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Max-Forwards:
+      - '20'
+      Via:
+      - 1.0 oag02-ri2.ri2.dc1.responsys.com (Gateway)
+      Connection:
+      - close
+      X-Correlationid:
+      - Id-f8e34d57b81e8fa2993caf21 0
+      Date:
+      - Tue, 31 May 2016 19:20:24 GMT
+      Server:
+      - Apache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Set-Cookie:
+      - BIGipServeroapi2-9000-9001=3792340746.10531.0000; path=/
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"errorMessage":null,"success":true,"recipientId":303306162}]'
+    http_version: 
+  recorded_at: Tue, 31 May 2016 19:20:24 GMT
+recorded_with: VCR 3.0.3
