@@ -87,7 +87,7 @@ class Unresponsys
     def to_h
       hash = {}
       @fields.each_pair do |key, val|
-        unless ["CREATED_DATE_", "UPDATED_DATE_"].include?(key)
+        unless ["CREATED_DATE_", "MODIFIED_DATE_"].include?(key)
           var = "@#{key.downcase.chomp('_')}".to_sym
           val = self.instance_variable_get(var)
           hash[key] = val.to_responsys
