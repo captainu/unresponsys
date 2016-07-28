@@ -14,7 +14,7 @@ class Unresponsys
         val = val.to_ruby
         self.instance_variable_set(var, val)
 
-        if key == 'ID_' || key == 'RIID_'
+        if key == 'ID_' || key == 'RIID_' || key == "CREATED_DATE_" || key == "UPDATED_DATE_"
           self.class.send(:attr_reader, str)
         else
           self.class.send(:define_method, "#{str}=") do |val|
@@ -87,9 +87,11 @@ class Unresponsys
     def to_h
       hash = {}
       @fields.each_pair do |key, val|
-        var = "@#{key.downcase.chomp('_')}".to_sym
-        val = self.instance_variable_get(var)
-        hash[key] = val.to_responsys
+        unless ["CREATED_DATE_", "UPDATED_DATE_"].include?(key)
+          var = "@#{key.downcase.chomp('_')}".to_sym
+          val = self.instance_variable_get(var)
+          hash[key] = val.to_responsys
+        end
       end
       hash
     end
