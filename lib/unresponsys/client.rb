@@ -67,16 +67,20 @@ class Unresponsys
     private
 
     def handle_error(response)
-      if response.is_a?(Hash) && response.keys.include?('errorCode')
-        case response['errorCode']
+      # newer versions of httparty response object
+      # do not return true for .is_a?(Hash)
+      # so use the parsed response instead - ckh 12/7/17
+      pres = response.parsed_response
+      if pres.is_a?(Hash) && pres.keys.include?('errorCode')
+        case pres['errorCode']
         when /TOKEN_EXPIRED/
-          raise Unresponsys::TokenExpired, response['detail']
+          raise Unresponsys::TokenExpired, pres['detail']
         when /NOT_FOUND/
-          raise Unresponsys::NotFound, response['detail']
+          raise Unresponsys::NotFound, pres['detail']
         when /LIMIT_EXCEEDED/
-          raise Unresponsys::LimitExceeded, response['detail']
+          raise Unresponsys::LimitExceeded, pres['detail']
         else
-          raise Unresponsys::Error, "#{response['title']}: #{response['detail']}"
+          raise Unresponsys::Error, "#{pres['title']}: #{pres['detail']}"
         end
       end
       response
